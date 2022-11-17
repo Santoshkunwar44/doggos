@@ -1,0 +1,11 @@
+.popOverBox {
+  display: none !important;
+}
+.css-1n0pbod-MuiSvgIcon-root {
+  display: none !important;
+}
+@media screen and (max-width: 700px) {
+  .css-1n0pbod-MuiSvgIcon-root {
+    display: block !important;
+  }
+}

@@ -1,0 +1,120 @@
+.sidebar {
+  border-right: 0.3px solid var(--border-color);
+  flex: 2.5;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+
+  transition: all 0.5s ease-in;
+}
+.show {
+  flex: 2.5 !important;
+  position: fixed;
+  top: 77px;
+  z-index: 9999;
+  background-color: #212426;
+  left: 0;
+  background-color: #2d2e2f;
+}
+.show .sidebar_header {
+  display: flex;
+}
+
+.show .sidebar_doggos_breed_list {
+  display: flex;
+}
+
+.show .sidebar_doggos_breed_list li {
+  display: flex;
+}
+.sidebar_header {
+  border-bottom: 0.3px solid var(--border-color);
+  text-align: center;
+  height: 40px;
+
+  display: flex;
+  background-color: #2d2e2f;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.sidebar_header_text {
+  color: gray;
+  font-family: var(--font-raleway);
+  font-size: 16px;
+  font-weight: 400;
+}
+.sidebar_doggos_breed_list {
+  display: flex;
+  overflow: scroll;
+  align-items: center;
+  max-height: calc(100vh - 110px);
+  padding: 0;
+  flex-direction: column;
+}
+.sidebar_doggos_breed_list::-webkit-scrollbar {
+  display: none;
+}
+.sidebar_doggos_breed_list li {
+  text-align: start;
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 0.3px solid var(--border-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 14px;
+  padding-left: 10px;
+  height: 49px;
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+  transition: all 0.3s ease;
+  font-family: "Nunito Sans", sans-serif;
+}
+.active_breed {
+  transform: scale(1.08);
+  padding-left: 2rem !important;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  background-color: #77777738;
+  font-weight: bold;
+  color: #ce6816 !important;
+}
+.sidebar_doggos_breed_list li:hover {
+  transform: scale(1.08);
+  padding-left: 2rem;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  background-color: #77777738;
+}
+.hideSidebarIcon {
+  width: 108px !important;
+  top: 208px !important;
+  height: 136px !important;
+  fill: rgb(206, 104, 22) !important;
+  color: rgb(206, 104, 22) !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  /* left: 0; */
+  right: -43px !important;
+  cursor: pointer !important;
+  z-index: 999;
+}
+.breedList_itemIcon {
+  width: 1.4rem !important;
+}
+.randomIcon {
+  width: 1.2rem !important;
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    flex: 1;
+  }
+  .sidebar_header {
+    display: none;
+  }
+  .sidebar_doggos_breed_list {
+    display: none;
+  }
+  .sidebar_doggos_breed_list li {
+    display: none;
+  }
+}

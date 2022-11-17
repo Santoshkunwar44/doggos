@@ -1,0 +1,11 @@
+.skeletonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.skeletonItem {
+  background-color: rgb(235 235 235 / 5%) !important;
+  border-radius: 4px;
+}

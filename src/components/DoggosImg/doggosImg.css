@@ -1,0 +1,59 @@
+.doggosImageBox {
+  position: relative;
+  width: 150px;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 120px;
+  padding: 18px;
+  cursor: pointer;
+  background-color: rgba(4, 9, 90, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.doggosImageBox::before {
+  content: "";
+  position: absolute;
+  width: 105px;
+  height: 180%;
+  background: linear-gradient(#5f00f879, #ff7504);
+  animation: animate 8s linear infinite;
+}
+.doggosImageBox::after {
+  content: "";
+  position: absolute;
+  inset: 2.4px;
+  background: rgb(31, 30, 30);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.doggosImageBox:hover {
+  transform: scale(1.09);
+}
+
+.doggosImage {
+  position: absolute;
+  z-index: 20;
+  transition: all 0.3s ease;
+  object-fit: cover;
+  width: 145.5px;
+  height: 115.5px;
+  border-radius: 5px;
+}
+.doggosImageBox:hover .doggosImage {
+  transform: scale(1.09);
+}
+.hide {
+  z-index: -1;
+}
